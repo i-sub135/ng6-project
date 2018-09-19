@@ -1,6 +1,6 @@
 # Ng6Project-Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Link On [Page Project](https://iyan-project133.github.io/ng6-project/output/) version 0.0.1.
 
 # Ng6Project
 
