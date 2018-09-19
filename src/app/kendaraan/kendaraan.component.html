@@ -1,0 +1,43 @@
+<div class="" *ngIf="!Kendaraan$">
+  <div class="preloader">
+    <div class="loading">
+      <img src="assets/img/loader.gif" alt="Loading" width="100">
+    </div>
+</div>
+</div>
+<h1 *ngIf="Kendaraan$">
+  Get Data Kendaraan
+</h1>
+
+<div class="media border p-3" *ngFor="let item of Kendaraan$">
+  <img src="https://image.flaticon.com/icons/png/512/206/206853.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  <div class="media-body">
+    <h4>{{ item.nama }} <small> - <i>{{ item.pjj }} / {{ item.tgl_pjj }}</i></small></h4>
+    <p>{{ item.cabang }}</p>
+    <div class="media p-3">
+      <img src="https://i1.wp.com/alvagrahasejuk.com/wp-content/uploads/2016/04/Icon-AC-Mobil.png?fit=300%2C300" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+      <div class="media-body">
+        <h4>{{ item.no_polisi }} <small><i>{{ item.type_mobile }} / {{ item.tahun_mobil }} / {{ item.warna_mobil }} </i></small></h4>
+        <table class="table table-bordered">
+          <tr>
+            <th>No Mesin</th>
+            <th>No Rangka</th>
+            <th>KM</th>
+            <th>Kisaran MRP</th>
+            <th>Harga MRP</th>
+            <th>Lokasi</th>
+          </tr>
+          <tr>
+            <td>{{ item.nomor_mesin }}</td>
+            <td>{{ item.nomor_rangka }}</td>
+            <td>{{ item.kilometer | number}}</td>
+            <td>Rp. {{ item.harga_mrp | number}}</td>
+            <td>Rp. {{ item.kisaran_mrp | number}}</td>
+            <td>{{ item.lokasi_asset }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<p>&nbsp;</p>

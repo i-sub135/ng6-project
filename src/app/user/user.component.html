@@ -1,0 +1,31 @@
+
+<div class="" *ngIf="!user$">
+  <div class="preloader">
+    <div class="loading">
+      <img src="assets/img/loader.gif" alt="Loading" width="100">
+    </div>
+</div>
+</div>
+<h1 *ngIf="user$">
+  Get User Data
+</h1>
+<div class="card" *ngFor="let user of user$">
+  <div class="card-header"> <strong>NIK :</strong> {{ user.nik }}</div>
+  <div class="card-body">
+    <table class="table table-bordered table-responsive">
+      <tr>
+        <th>username</th>
+        <th>gambar</th>
+        <th>level</th>
+        <th>kantor</th>
+      </tr>
+      <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.gambar }}</td>
+        <td>{{ user.level }}</td>
+        <td>{{ user.kantor }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<p>&nbsp;</p>

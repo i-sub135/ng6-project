@@ -1,0 +1,15 @@
+$cld : darkblue;
+$cld2 : darkgreen;
+
+.table{
+  th{
+    text-align: center;
+    background-color: lightgray;
+    color: $cld2;
+  }
+  td{
+    background-color: lightgreen;
+    font-weight: bold;
+    color: $cld;
+  }
+}
